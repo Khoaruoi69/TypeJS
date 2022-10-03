@@ -1,9 +1,20 @@
+import { useState } from "react"
+
 export const LoggedIn = ()=>{
-    const handleLogin = ()=>{}
-    const handeLogout = ()=>{}
+
+    const [isLoggedIn,setInLoggedIn] = useState(false)
+
+    const handleLogin = ()=>{
+        setInLoggedIn(true);
+    }
+    const handeLogout = ()=>{
+        setInLoggedIn(false);
+    }
     return (
         <div>
-            <button>Login</button>
+            <button onClick={handleLogin}>Login</button>
+            <button onClick={handeLogout}>Logout</button>
+            <div> User is {isLoggedIn? 'Logged in ': 'Logged out '}  </div>
         </div>
     )
 }

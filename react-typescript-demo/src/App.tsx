@@ -8,6 +8,7 @@ import {Heading} from './Components/Heading';
 import { Oscart} from './Components/Oscar';
 import {Button} from './Components/Button';
 import {Input} from './Components/Input';
+import {User} from './Components/state/User';
 function App() {
   const personName ={
     first: 'John',
@@ -37,10 +38,11 @@ function App() {
       <Oscart>
         <Heading> Super hero asdas </Heading>
       </Oscart> */}
-      <Button handleClick={(event, id)=>{
+      {/* <Button handleClick={(event, id)=>{
         console.log("Button clicked: " ,event, id)
       }}/>
-      <Input value='' handleChange={(event)=>console.log(event)}/>
+      <Input value='' handleChange={(event)=>console.log(event)}/> */}
+      <User/>
     </div>
   );
 }
