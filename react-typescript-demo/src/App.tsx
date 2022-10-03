@@ -6,6 +6,8 @@ import {PersonList} from './Components/PersonList';
 import {Status} from './Components/Status';
 import {Heading} from './Components/Heading';
 import { Oscart} from './Components/Oscar';
+import {Button} from './Components/Button';
+import {Input} from './Components/Input';
 function App() {
   const personName ={
     first: 'John',
@@ -27,14 +29,18 @@ function App() {
   
   return (
     <div className="App">
-      <Greet name='Vishwas'  isLoggedIn={true}/>
+      {/* <Greet name='Vishwas'  isLoggedIn={true}/>
       <Person name={personName}/>
       <PersonList names={nameList}/>
       <Status status="success"/>
       <Heading> Phaceholder text</Heading>
       <Oscart>
         <Heading> Super hero asdas </Heading>
-      </Oscart>
+      </Oscart> */}
+      <Button handleClick={(event, id)=>{
+        console.log("Button clicked: " ,event, id)
+      }}/>
+      <Input value='' handleChange={(event)=>console.log(event)}/>
     </div>
   );
 }
